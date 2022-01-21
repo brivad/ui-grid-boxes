@@ -7,51 +7,51 @@ const UI = {
   div6: true,
   div7: true,
   div8: true,
-};
+}
 
 function renderMenu() {
-  let menuHtml = '';
+  let menuHtml = ''
 
   Object.entries(UI).forEach(([key, isVisible]) => {
     const str = `<button onclick="toggleVisibility('${key}')" class=${
       isVisible ? 'visible' : 'hidden'
-    }>${key}</button>`;
+    }>${key}</button>`
 
-    menuHtml += str;
+    menuHtml += str
 
-    isVisible ? showBox(key) : hideBox(key);
-  });
-  const menuEl = document.getElementById('menu');
-  menuEl.innerHTML = menuHtml;
+    isVisible ? showBox(key) : hideBox(key)
+  })
+  const menuEl = document.getElementById('menu')
+  menuEl.innerHTML = menuHtml
 }
 
-renderMenu();
+renderMenu()
 
 function toggleVisibility(key) {
-  UI[key] = !UI[key];
-  const box = document.getElementById(key);
-  renderMenu();
+  UI[key] = !UI[key]
+  const box = document.getElementById(key)
+  renderMenu()
   UI[key] === false
     ? (box.style.display = 'none')
-    : (box.style.display = 'block');
+    : (box.style.display = 'block')
 }
 
 function hideBox(key) {
-  const box = document.getElementById(key);
-  box.style.display = 'none';
+  const box = document.getElementById(key)
+  box.style.display = 'none'
 }
 
 function showBox(key) {
-  const box = document.getElementById(key);
-  box.style.display = 'block';
+  const box = document.getElementById(key)
+  box.style.display = 'block'
 }
 
 function closeHandler(elId) {
-  const el = document.getElementById(elId);
+  const el = document.getElementById(elId)
   if (el.classList.contains('nascosto')) {
     //
-    el.classList.remove('nascosto');
+    el.classList.remove('nascosto')
   } else {
-    el.classList.add('nascosto');
+    el.classList.add('nascosto')
   }
 }
