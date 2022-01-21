@@ -1,0 +1,41 @@
+:root {
+  --col: 3;
+  --row: 3;
+  --azz: ;
+}
+
+body {
+  background: orange;
+  counter-reset: divv;
+}
+
+div.grid-item:before {
+  counter-increment: divv;
+  content: counter(divv);
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.grid-item {
+  background-color: brown;
+
+  margin: 5px;
+  box-shadow: 1px 3px 5px;
+  flex: 30%;
+}
+
+.visible {
+  background-color: aqua;
+}
+
+.hidden {
+  background-color: lightgrey;
+}
+
+video {
+  width: 100%;
+}
