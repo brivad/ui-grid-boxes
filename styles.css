@@ -1,7 +1,6 @@
 :root {
   --col: 3;
   --row: 3;
-  --azz: ;
 }
 
 body {
@@ -14,7 +13,7 @@ div.grid-item:before {
   content: counter(divv);
 }
 
-.grid-container {
+.flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -28,14 +27,35 @@ div.grid-item:before {
   flex: 30%;
 }
 
-.visible {
+.visible-box {
   background-color: aqua;
 }
 
-.hidden {
+.invisible-box {
   background-color: lightgrey;
 }
 
 video {
   width: 100%;
+}
+
+.joystick {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  max-width: 600px;
+  text-align: center;
+}
+
+.joystick > div {
+  border: 1px solid black;
+}
+
+.joysticks {
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }

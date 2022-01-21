@@ -23,7 +23,7 @@ function renderMenu(UI) {
 
   Object.entries(UI).forEach(([key, isVisible]) => {
     const str = `<button onclick="toggleVisibility('${key}')" class=${
-      isVisible ? 'visible' : 'hidden'
+      isVisible ? 'visible-box' : 'invisible-box'
     }>${key}</button>`;
 
     menuHtml += str;
