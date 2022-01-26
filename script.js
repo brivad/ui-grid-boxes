@@ -1,15 +1,21 @@
 const defaultUI = {
-  'box-joystick': true,
-  'box-video': true,
-  'box-metrics': true,
-  'box-ai': true,
-  'box-disk': true,
-  'box-debug': true,
-  'box-luci': true,
-  'box-cristo': true,
+  a: true,
+  b: true,
+  c: true,
+  d: true,
+  e: true,
+  f: true,
+  g: true,
+  h: true,
+  i: true,
+  j: true,
+  k: true,
+  l: true,
+  m: true,
 }
 
-let UI = localStorage.getItem('azz-ui')
+let UI = localStorage.getItem('ui-grid-boxes')
+
 if (UI) {
   UI = JSON.parse(UI)
 } else {
@@ -32,7 +38,8 @@ function renderMenu(UI) {
   })
   const menuEl = document.getElementById('menu')
   menuEl.innerHTML = menuHtml
-  localStorage.setItem('azz-ui', JSON.stringify(UI))
+
+  localStorage.setItem('ui-grid-boxes', JSON.stringify(UI))
 }
 
 function toggleVisibility(key) {
@@ -57,7 +64,6 @@ function showBox(key) {
 function closeHandler(elId) {
   const el = document.getElementById(elId)
   if (el.classList.contains('nascosto')) {
-    //
     el.classList.remove('nascosto')
   } else {
     el.classList.add('nascosto')

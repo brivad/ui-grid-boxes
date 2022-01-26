@@ -8,7 +8,7 @@ body {
   counter-reset: divv;
 }
 
-div.grid-item:before {
+div.card:before {
   counter-increment: divv;
   content: counter(divv);
 }
@@ -19,7 +19,7 @@ div.grid-item:before {
   justify-content: space-around;
 }
 
-.grid-item {
+.card {
   background-color: brown;
 
   margin: 5px;
